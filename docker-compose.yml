@@ -5,7 +5,9 @@ services:
     image: traefik:v2.3
     command: --api.insecure=true --providers.docker
     ports:
+      #port -> main interface
       - "80:80"
+      #port -> Monitor web ui (Please disabled or keep secured)
       - "8080:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
