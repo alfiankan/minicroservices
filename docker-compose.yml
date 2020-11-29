@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  minicroservice1:
+    build: ./services1/Dockerfile
+    image: golang:latest
+    labels:
+      - traefik.http.routers.my-container.rule=Host('localhost')
