@@ -19,3 +19,7 @@ services:
     build: ./services2
     labels:
       - "traefik.http.routers.service2.rule=Host(`s2.localhost`) || ( Host(`localhost`) && PathPrefix(`/s2`) )"
+  service2:
+    build: ./services2
+    labels:
+      - "traefik.http.routers.service2.rule=Host(`s2.localhost`) || ( Host(`localhost`) && PathPrefix(`/s2`) )"
