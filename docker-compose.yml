@@ -14,4 +14,8 @@ services:
   service1:
     build: ./services1
     labels:
-      - "traefik.http.routers.whoami.rule=Host(`service1.docker.localhost`) || ( Host(`localhost`) && PathPrefix(`/s1`) )"
+      - "traefik.http.routers.service1.rule=Host(`s1.localhost`) || ( Host(`localhost`) && PathPrefix(`/s1`) )"
+  service2:
+    build: ./services2
+    labels:
+      - "traefik.http.routers.service2.rule=Host(`s2.localhost`) || ( Host(`localhost`) && PathPrefix(`/s2`) )"
